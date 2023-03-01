@@ -45,7 +45,7 @@ header{
 	display: inline-block;
 	height: 1px;
 	width: 100%;
-	border-top: 1px solid #E8E8E8;
+	border-top: 1px solid #101010;
 }
 
 .countdown .dividing_line_container .counter_subtitle>span,
@@ -69,7 +69,7 @@ header{
 .countdown .dividing_line_container hr,
 .historic_clock .dividing_line_container hr {
 	margin: 0;
-	border-top: 1px solid #E8E8E8;
+	border-top: 1px solid #101010;
 	width: 100%;
 }
 
@@ -129,12 +129,13 @@ header{
 
 .slider{
 	position: relative;
-	background-color: white;
+	background-color: rgb(215, 214, 214);
 	width:989px;
 	height: 432px;
 	margin: 50px auto;
 	box-shadow: 0 4px 4px 0 rgb(0 0 0 / 52%), 0 1px 5px 0 rgb(0 0 0 / 45%), 0 3px 1px -2px rgb(0 0 0 / 20%);
 	overflow: hidden;
+	border-radius: 0.5em;
 }
 
 .slider-controls{
@@ -225,29 +226,42 @@ header{
 .slide-link {
 	display: inline-block;
 	padding: 10px 20px;
-	color: #fff;
+	color: #ffffff;
 	border-radius: 3px;
 	text-decoration: none;
 	background-color: #ff4081;
 }
 
-.slide-image img {
-	max-width: 100%;
+img {
+	width:500px;
+	height:auto;
+	margin: auto 3em;
+	border-radius: 0.5em;
+}
+
+.spirit-img{
+	margin: 2em 3em;
+}
+
+.opp-img{
+	height: 400px;
+	width:auto;
+	margin-right:10em;
 }
 
 /* Slide animations */
 #btn-1:checked~.slides .slide:nth-child(1) {
-	transform: translatex(0);
+	transform: translateX(0);
 	opacity: 1;
 }
 
 #btn-2:checked~.slides .slide:nth-child(2) {
-	transform: translatex(0);
+	transform: translateX(0);
 	opacity: 1;
 }
 
 #btn-3:checked~.slides .slide:nth-child(3) {
-	transform: translatex(0);
+	transform: translateX(0);
 	opacity: 1;
 }
 
@@ -271,16 +285,41 @@ header{
 
 @keyframes swap-out {
 	0% {
-		transform: translatex(0);
+		transform: translateX(0);
 		opacity: 1;
 	}
 
 	50% {
-		transform: translatex(50%);
+		transform: translateX(50%);
 		opacity: 0;
 	}
 
 	100% {
-		transform: translatex(100%);
+		transform: translateX(100%);
 	}
+}
+/* footer */
+footer p{
+	font-family:"Quantico", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	margin: auto 1em;
+}
+
+footer a{
+	color: black;
+	text-decoration: none;
+	font-family: "Quantico",
+		Arial,
+		Helvetica,
+		sans-serif;
+}
+ footer a:visited{
+	color:rgba(84, 17, 1, 0.27);
+ }
+
+
+footer{
+	display: flex;
+	justify-content: center;
+
 }
