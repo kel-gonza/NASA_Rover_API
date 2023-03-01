@@ -9,6 +9,7 @@ const hrs = document.querySelector('.hrs');
 const mins = document.querySelector('.mins');
 const secs = document.querySelector('.secs');
 
+// code
 
 const startDate = new Date('2011-11-26T15:02:00Z');
 
@@ -31,7 +32,7 @@ function updateTimer() {
   const minutes = Math.floor(timeDiff / 1000 / 60) % 60;
   const hours = Math.floor(timeDiff / 1000 / 60 / 60) % 24;
 
-  
+  // add a default 0 in front of the numbers
   const formattedYears = years.toString().padStart(2, '0');
   const formattedMonths = months.toString().padStart(2, '0');
   const formattedDays = days.toString().padStart(2, '0');
