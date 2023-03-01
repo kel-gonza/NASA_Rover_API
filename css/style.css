@@ -5,6 +5,7 @@
 /* BORDER BOX HACK */
 *{
 	box-sizing: border-box;
+	font-family:'Roboto', Arial, Helvetica, sans-serif;
 }
 
 /***************************************************
@@ -17,11 +18,14 @@
 }
 body{
 	font-size: 16px;
-	line-height: 1.5;
+	height:100%;
+	width:100%;
 	font-family: 'Roboto', sans-serif;
-	background: url(../img/mars_atmosphere.jpg);
-	background-repeat: no-repeat;
+	background-image: linear-gradient(180deg, rgba(64, 25, 16, 0.527) 22%, rgba(166, 50, 8, 0.526) 59%, rgba(166, 66, 8, 0.521) 100%),url(../img/mars_atmosphere.jpg);
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin:0;
 }
 
 header{
@@ -199,7 +203,7 @@ header{
 	height: 100%;
 
 	opacity: 0;
-	transform: translatex(-100%);
+	transform: translateX(-100%);
 	transition: transform  250ms linear;
 }
 
