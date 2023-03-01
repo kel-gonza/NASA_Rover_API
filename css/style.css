@@ -325,9 +325,37 @@ footer{
 }
 
 /* media queries */
+/* mini phones */
+@media screen and (max-width:300px){
+	h1{
+		font-size: 1.5em;
+	}
+	.slide-content,
+	.countdown .dividing_line_container .counter_subtitle>span,
+	.historic_clock .dividing_line_container .counter_subtitle>span, .countdown .time_label,
+	.historic_clock .time_label {
+		font-size: 0.6rem;	
+	}
+	.slide-title{
+		font-size:2rem;
+	}
+	.slide-txt{
+		font-size:0.7rem;
+	}
+	.slide-link{
+		font-size:1rem;
+	}
+	.cur-img{
+		height: 300px;
+	}
+	footer{
+		font-size:1rem;
+	}
+}
+
 
 /* phones */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 920px) {
 	.slider{
 		width: auto;
 		margin: auto 1em;
@@ -388,5 +416,37 @@ footer{
 	}
 	footer a:visited{
 		color:rgb(70, 1, 1);
+	}
+}
+
+/* for tablets fix font size */
+@media (min-width: 601px) and (max-width:920px) {
+	h1{
+		font-size:3rem;
+	}
+	.slide-title{
+		font-size: 3rem;
+	}
+	.slide-txt{
+		font-size: 1.8rem;
+	}
+	.slide-link{
+		font-size: 2rem;
+	}
+	.countdown .time_label, .historic_clock .time_label{
+		font-size:1.3rem;
+		}
+	.slide-content, .countdown .dividing_line_container .counter_subtitle>span,
+	.historic_clock .dividing_line_container .counter_subtitle>span{
+		font-size: 1.7rem;
+	}
+	.slider{
+		margin: auto 2.5em;
+	}
+	.slide{
+		padding:3rem;
+	}
+	footer p{
+		font-size: 1.5rem;
 	}
 }
