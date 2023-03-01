@@ -371,4 +371,22 @@ footer{
 	#btn-1:not(:checked)~.slides .slide:nth-child(1), #btn-2:not(:checked)~.slides .slide:nth-child(2), #btn-3:not(:checked)~.slides .slide:nth-child(3){
 		animation: none;
 	}
+
+	footer p:nth-child(2){
+		display: none;
+	}
+	footer p{
+		margin: 1em;
+		color: rgb(210, 210, 210);
+	}
+	footer{
+		background-color:  #ff4081;
+		border-radius: 5px;
+	}
+	footer a{
+		color: rgb(210, 210, 210);
+	}
+	footer a:visited{
+		color:rgb(70, 1, 1);
+	}
 }
