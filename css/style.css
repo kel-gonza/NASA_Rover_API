@@ -243,7 +243,7 @@ img {
 	margin: 2em 3em;
 }
 
-.opp-img{
+.cur-img{
 	height: 400px;
 	width:auto;
 	margin-right:10em;
@@ -322,4 +322,53 @@ footer{
 	display: flex;
 	justify-content: center;
 
+}
+
+/* media queries */
+
+/* phones */
+@media screen and (max-width: 600px) {
+	.slider{
+		width: auto;
+		margin: auto 1em;
+		height: auto;
+	}
+	.slider-controls{
+		display: none;
+	}
+
+	.slide{
+		flex-direction: column;
+		opacity: 1;
+		transform: none;
+		transition: none;
+		position:static;
+		width:87%;
+	}
+	.slide-content{
+		width: 98%;
+		overflow: hidden;
+	}
+
+	.countdown{
+		margin:2em auto;
+	}
+
+	.countdown .unit, .historic_clock .unit{
+		font-size: 1.9em;
+	}
+
+	.slide-link{
+		width:100%;
+	}
+
+	img, .spirit-img {
+		margin: auto;
+		position: relative;
+		width:100%;
+		height: 100%;
+	}
+	#btn-1:not(:checked)~.slides .slide:nth-child(1), #btn-2:not(:checked)~.slides .slide:nth-child(2), #btn-3:not(:checked)~.slides .slide:nth-child(3){
+		animation: none;
+	}
 }
