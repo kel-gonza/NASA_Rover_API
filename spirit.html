@@ -15,19 +15,22 @@
       ><span>> <a href="#">[current page]</a></span>
     </header>
     <main>
-      <img src="#" alt="{roverName}" />
-      <h1>[ROVER NAME]</h1>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/f/f8/KSC-03PD-0786.jpg"
+        alt="Spirit Rover Image"
+      />
+      <h1>Spirit Rover Raw Photos</h1>
     </main>
     <section class="info">
       <div class="explanation">
         <div class="part-One">
           <h2>What to Expect?</h2>
           <p>
-            Welcome to the page for [rover's name]! Here, you can view raw
-            photos that [rover's name] has taken on Mars on a specific date.
-            Simply enter the date you're interested in, and you'll be able to
-            see how many photos the rover took on that day. Additionally, you
-            can choose to filter the photos by camera or see them all at once.
+            Welcome to the page for Spirit's Raw Images! Here, you can view raw
+            photos that Spirit has taken on Mars on a specific date. Simply
+            enter the date you're interested in, and you'll be able to see how
+            many photos the rover took on that day. Additionally, you can choose
+            to filter the photos by camera or see them all at once.
           </p>
           <h2>What is a Sol?</h2>
           <p>
@@ -35,19 +38,18 @@
             particular day on the rover's webpage, you'll also see the
             corresponding sol number for that day. The sol count begins on the
             day the rover landed on Mars. For instance, if a photo was taken on
-            [rover's name]'s 1000th Martian sol exploring Mars, its sol
-            attribute would be 1000.
+            Spirit's 1000th Martian sol exploring Mars, its sol attribute would
+            be 1000.
           </p>
         </div>
         <div class="part-two">
           <h2>Camera Abbreviations</h2>
           <p>
             When you click on the filters, you'll see some unfamiliar words.
-            These are abbreviations for the types of cameras that [rover's name]
-            has. It's important to note that while Spirit and Opportunity have
-            the same cameras, Curiosity has a different ones. So, don't forget
-            to check the Curiosity rover's page to see what kind of camera it
-            has.
+            These are abbreviations for the types of cameras that Spirit has.
+            It's important to note that while Spirit and Opportunity have the
+            same cameras, Curiosity has a different ones. So, don't forget to
+            check the Curiosity rover's page to see what kind of camera it has.
           </p>
           <table>
             <thead>
@@ -64,6 +66,18 @@
               <tr>
                 <td>RHAZ</td>
                 <td>Rear Hazard Avoidance Camera</td>
+              </tr>
+              <tr>
+                <td>NAVCAM</td>
+                <td>Navigation Camera</td>
+              </tr>
+              <tr>
+                <td>PANCAM</td>
+                <td>Panoramic Camera</td>
+              </tr>
+              <tr>
+                <td>MINITES</td>
+                <td>Miniature Thermal Emission Spectrometer (Mini-TES)</td>
               </tr>
             </tbody>
           </table>
@@ -104,9 +118,71 @@
             >
               <ul>
                 <!-- name of the camera -->
-                <li class="facetitem ri-checkbox" id="[name of the camera]">
+                <li
+                  class="facetitem ri-checkbox"
+                  id="front-hazard-avoidance-camera"
+                >
                   <label>
-                    <input class="facetitem-checkbox" type="checkbox" />
+                    <input
+                      class="facetitem-checkbox"
+                      type="checkbox"
+                      name="front-hazard-avoidance-camera"
+                      checked
+                    />
+                    <span class="label-text">
+                      <span>FHAZ</span>
+                    </span>
+                  </label>
+                </li>
+                <li
+                  class="facetitem ri-checkbox"
+                  id="rear-hazard-avoidance-camera"
+                >
+                  <label>
+                    <input
+                      type="checkbox"
+                      class="facetitem-checkbox"
+                      name="rear-hazard-avoidance-camera"
+                    />
+                    <span class="label-text">
+                      <span>RHAZ</span>
+                    </span>
+                  </label>
+                </li>
+                <li class="facetitem ri-checkbox" id="navigation-camera">
+                  <label>
+                    <input
+                      type="checkbox"
+                      class="facetitem-checkbox"
+                      name="navigation-camera"
+                    />
+                    <span class="label-text">
+                      <span>NAVCAM</span>
+                    </span>
+                  </label>
+                </li>
+                <li class="facetitem ri-checkbox" id="Panoramic Camera">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="panoramic-camera"
+                      class="facetitem-checkbox"
+                    />
+                    <span class="label-text">
+                      <span>PANCAM</span>
+                    </span>
+                  </label>
+                </li>
+                <li class="facetitem ri-checkbox" id="Mini-TES">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="mini-tes"
+                      class="facetitem-checkbox"
+                    />
+                    <span class="label-text">
+                      <span>MINITES</span>
+                    </span>
                   </label>
                 </li>
               </ul>
