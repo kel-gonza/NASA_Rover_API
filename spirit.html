@@ -9,6 +9,188 @@
     <title>Spirit Rover</title>
   </head>
   <body>
+    <header>
+      <!-- paths that show your current page -->
+      <span>> <a href="index.html">Home Page </a></span
+      ><span>> <a href="#">[current page]</a></span>
+    </header>
+    <main>
+      <img src="#" alt="{roverName}" />
+      <h1>[ROVER NAME]</h1>
+    </main>
+    <section class="info">
+      <div class="explanation">
+        <div class="part-One">
+          <h2>What to Expect?</h2>
+          <p>
+            Welcome to the page for [rover's name]! Here, you can view raw
+            photos that [rover's name] has taken on Mars on a specific date.
+            Simply enter the date you're interested in, and you'll be able to
+            see how many photos the rover took on that day. Additionally, you
+            can choose to filter the photos by camera or see them all at once.
+          </p>
+          <h2>What is a Sol?</h2>
+          <p>
+            A sol is the Martian equivalent of a day. When you select a
+            particular day on the rover's webpage, you'll also see the
+            corresponding sol number for that day. The sol count begins on the
+            day the rover landed on Mars. For instance, if a photo was taken on
+            [rover's name]'s 1000th Martian sol exploring Mars, its sol
+            attribute would be 1000.
+          </p>
+        </div>
+        <div class="part-two">
+          <h2>Camera Abbreviations</h2>
+          <p>
+            When you click on the filters, you'll see some unfamiliar words.
+            These are abbreviations for the types of cameras that [rover's name]
+            has. It's important to note that while Spirit and Opportunity have
+            the same cameras, Curiosity has a different ones. So, don't forget
+            to check the Curiosity rover's page to see what kind of camera it
+            has.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Abbreviation</th>
+                <th>Camera</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>FHAZ</td>
+                <td>Front Hazard Avoidance Camera</td>
+              </tr>
+              <tr>
+                <td>RHAZ</td>
+                <td>Rear Hazard Avoidance Camera</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="show">
+      <div class="get-date-container">
+        <div class="date-label-container">
+          <label for="date">
+            Set a date
+            <input type="date" name="date" />
+          </label>
+          <button class="get-date">Press</button>
+        </div>
+      </div>
+      <div class="api">
+        <!-- this part will show the number of sols and total number of photos -->
+        <p class="number-sols"></p>
+        <p class="total-photos"></p>
+        <!-- mission manifest api -->
+      </div>
+    </section>
+    <hr />
+    <!-- create rows -->
+    <div class="layout">
+      <div id="primary-row">
+        <aside class="boxed raw-images">
+          <header>
+            <h2>Camera</h2>
+            <div class="mobile-filter-contorls"></div>
+          </header>
+          <div class="form-section">
+            <fieldset
+              class="cameras expanded facet-section"
+              id="form-section-cameras"
+            >
+              <ul>
+                <!-- name of the camera -->
+                <li class="facetitem ri-checkbox" id="[name of the camera]">
+                  <label>
+                    <input class="facetitem-checkbox" type="checkbox" />
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </aside>
+      </div>
+      <div id="secondary-row">
+        <div class="pagination-status">
+          <span class="nonessential">Showing</span>
+          <b>
+            <span class="start-index">1</span>
+            <span id="text">-</span>
+            <span class="end-index"></span>
+            <span id="text">-</span>
+          </b>
+          <span id="text">of</span>
+          <b>
+            <span class="total-results"></span>
+          </b>
+          <span class="nonessential">images</span>
+        </div>
+        <div class="pagination-options">
+          <div>
+            <div class="pagination-nav">
+              <nav class="pagination">
+                <!-- this is only disabled if it is at 1 however, once it goes to the next page it can go to the previous page -->
+                <!-- you will use javascript to go to the previous page and then to the next -->
+                <span class="prev"> > </span>
+                <div class="page-selector">
+                  <!-- for the input below the placeholder will be where the number is att right now you will use js to do that as well as the max. how many photos are currently in the page -->
+                  <input
+                    type="number"
+                    class="page-num"
+                    placeholder=""
+                    size="4"
+                    min="1"
+                    max=""
+                  />
+                  <span id="text">of</span>
+                  <span class="total-pages"></span>
+                </div>
+                <span class="next"> > </span>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-filter-btn"></div>
+        <section class="raw-img-gallary gallary">
+          <ul class="raw-images-list">
+            <!-- will create li through js -->
+          </ul>
+        </section>
+        <footer class="search-footer">
+          <div class="pagination-options">
+            <div>
+              <div class="pagination-nav">
+                <nav class="pagination">
+                  <span class="prev"> > </span>
+                  <div class="page-selector">
+                    <!-- for the input below the placeholder will be where the number is att right now you will use js to do that as well as the max. how many photos are currently in the page -->
+                    <input
+                      type="number"
+                      class="page-num"
+                      placeholder=""
+                      size="4"
+                      min="1"
+                      max=""
+                    />
+                    <span id="text">of</span>
+                    <span class="total-pages"></span>
+                  </div>
+                  <span class="next"> > </span>
+                </nav>
+              </div>
+            </div>
+            <span class="scroll-to-top">
+              <a href="#">Back to Top</a>
+            </span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
     <script type="text/javascript" src="js/spiritApi.js"></script>
   </body>
 </html>
