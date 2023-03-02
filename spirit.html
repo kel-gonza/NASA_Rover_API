@@ -18,240 +18,250 @@
         <div class="gradient-container-botto"></div>
       </div>
     </section>
-    <div class="paths">
-      <!-- paths that show your current page -->
-      <span>> <a href="index.html">Home Page </a></span
-      ><span>> <a href="#">[current page]</a></span>
-    </div>
-    <section class="info">
-      <div class="explanation">
-        <div class="part-One">
-          <div class="spaceing">
-            <h2>What to Expect?</h2>
-            <p>
-              Welcome to the page for Spirit's Raw Images! Here, you can view
-              raw photos that Spirit has taken on Mars on a specific date.
-              Simply enter the date you're interested in, and you'll be able to
-              see how many photos the rover took on that day. Additionally, you
-              can choose to filter the photos by camera or see them all at once.
-            </p>
+    <div class="nav-color">
+      <ul class="nav nav-hidden">
+        <li>
+          <div class="nav-title">
+            <a href="index.html" class="main-nav-item" target="_self">Home</a>
           </div>
-          <div class="spaceing">
-            <h2>What is a Sol?</h2>
-            <p>
-              A sol is the Martian equivalent of a day. When you select a
-              particular day on the rover's webpage, you'll also see the
-              corresponding sol number for that day. The sol count begins on the
-              day the rover landed on Mars. For instance, if a photo was taken
-              on Spirit's 1000th Martian sol exploring Mars, its sol attribute
-              would be 1000.
-            </p>
-          </div>
-        </div>
-        <div class="part-two">
-          <div class="spaceing">
-            <h2>Camera Abbreviations</h2>
-            <p>
-              When you click on the filters, you'll see some unfamiliar words.
-              These are abbreviations for the types of cameras that Spirit has.
-              It's important to note that while Spirit and Opportunity have the
-              same cameras, Curiosity has a different ones. So, don't forget to
-              check the Curiosity rover's page to see what kind of camera it
-              has.
-            </p>
-          </div>
-          <div class="spaceing">
-            <table>
-              <thead>
-                <tr>
-                  <th>Abbreviation</th>
-                  <th>Camera</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>FHAZ</td>
-                  <td>Front Hazard Avoidance Camera</td>
-                </tr>
-                <tr>
-                  <td>RHAZ</td>
-                  <td>Rear Hazard Avoidance Camera</td>
-                </tr>
-                <tr>
-                  <td>NAVCAM</td>
-                  <td>Navigation Camera</td>
-                </tr>
-                <tr>
-                  <td>PANCAM</td>
-                  <td>Panoramic Camera</td>
-                </tr>
-                <tr>
-                  <td>MINITES</td>
-                  <td>Miniature Thermal Emission Spectrometer (Mini-TES)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr />
-    <section class="show">
-      <div class="get-date-container">
-        <div class="date-label-container">
-          <label for="date">
-            Set a date
-            <input type="date" name="date" />
-          </label>
-          <button class="get-date">Press</button>
-        </div>
-      </div>
-      <div class="api">
-        <!-- this part will show the number of sols and total number of photos -->
-        <p class="number-sols"></p>
-        <p class="total-photos"></p>
-        <!-- mission manifest api -->
-      </div>
-    </section>
-    <hr />
-    <!-- create rows -->
-    <div class="layout">
-      <div id="primary-row">
-        <aside class="boxed raw-images">
-          <header>
-            <h2>Camera</h2>
-            <div class="mobile-filter-contorls"></div>
-          </header>
-          <div class="form-section">
-            <fieldset
-              class="cameras expanded facet-section"
-              id="form-section-cameras"
+        </li>
+        <li>
+          <div class="nav-title">
+            <a href="Opportunity.html" class="main-nav-item" target="_self"
+              >Opportunity</a
             >
-              <ul>
-                <!-- name of the camera -->
-                <li
-                  class="facetitem ri-checkbox"
-                  id="front-hazard-avoidance-camera"
-                >
-                  <label>
-                    <input
-                      class="facetitem-checkbox"
-                      type="checkbox"
-                      name="front-hazard-avoidance-camera"
-                      checked
-                    />
-                    <span class="label-text">
-                      <span>FHAZ</span>
-                    </span>
-                  </label>
-                </li>
-                <li
-                  class="facetitem ri-checkbox"
-                  id="rear-hazard-avoidance-camera"
-                >
-                  <label>
-                    <input
-                      type="checkbox"
-                      class="facetitem-checkbox"
-                      name="rear-hazard-avoidance-camera"
-                    />
-                    <span class="label-text">
-                      <span>RHAZ</span>
-                    </span>
-                  </label>
-                </li>
-                <li class="facetitem ri-checkbox" id="navigation-camera">
-                  <label>
-                    <input
-                      type="checkbox"
-                      class="facetitem-checkbox"
-                      name="navigation-camera"
-                    />
-                    <span class="label-text">
-                      <span>NAVCAM</span>
-                    </span>
-                  </label>
-                </li>
-                <li class="facetitem ri-checkbox" id="Panoramic Camera">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="panoramic-camera"
-                      class="facetitem-checkbox"
-                    />
-                    <span class="label-text">
-                      <span>PANCAM</span>
-                    </span>
-                  </label>
-                </li>
-                <li class="facetitem ri-checkbox" id="Mini-TES">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="mini-tes"
-                      class="facetitem-checkbox"
-                    />
-                    <span class="label-text">
-                      <span>MINITES</span>
-                    </span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
           </div>
-        </aside>
+        </li>
+        <li class="current">
+          <div class="nav-title">
+            <a href="spirit.html" class="main-nav-item" target="_self"
+              >Spirit</a
+            >
+          </div>
+        </li>
+        <li>
+          <div class="nav-title">
+            <a href="Curiosity.html" class="main-nav-item" target="_self"
+              >Curiosity</a
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="layout">
+      <div class="paths">
+        <!-- paths that show your current page -->
+        <span>> <a href="index.html">Home Page </a></span
+        ><span>> <a href="#">Mars Spirit Rover Raw Images</a></span>
       </div>
-      <div id="secondary-row">
-        <div class="pagination-status">
-          <span class="nonessential">Showing</span>
-          <b>
-            <span class="start-index">1</span>
-            <span id="text">-</span>
-            <span class="end-index"></span>
-            <span id="text">-</span>
-          </b>
-          <span id="text">of</span>
-          <b>
-            <span class="total-results"></span>
-          </b>
-          <span class="nonessential">images</span>
+      <article>
+        <div class="raw-image-form faceted-search-hidden-filters">
+          <header id="page-header">
+            <h1 id="article-title" class="article-title">Raw Images</h1>
+          </header>
+          <div></div>
         </div>
-        <div class="pagination-options">
-          <div>
-            <div class="pagination-nav">
-              <nav class="pagination">
-                <!-- this is only disabled if it is at 1 however, once it goes to the next page it can go to the previous page -->
-                <!-- you will use javascript to go to the previous page and then to the next -->
-                <span class="prev"> > </span>
-                <div class="page-selector">
-                  <!-- for the input below the placeholder will be where the number is att right now you will use js to do that as well as the max. how many photos are currently in the page -->
-                  <input
-                    type="number"
-                    class="page-num"
-                    placeholder=""
-                    size="4"
-                    min="1"
-                    max=""
-                  />
-                  <span id="text">of</span>
-                  <span class="total-pages"></span>
-                </div>
-                <span class="next"> > </span>
-              </nav>
+      </article>
+      <section class="info">
+        <div class="explanation">
+          <div class="part-One">
+            <div class="spaceing">
+              <h2>What to Expect?</h2>
+              <p>
+                Welcome to the page for Spirit's Raw Images! Here, you can view
+                raw photos that Spirit has taken on Mars on a specific date.
+                Simply enter the date you're interested in, and you'll be able
+                to see how many photos the rover took on that day. Additionally,
+                you can choose to filter the photos by camera or see them all at
+                once.
+              </p>
+            </div>
+            <div class="spaceing">
+              <h2>What is a Sol?</h2>
+              <p>
+                A sol is the Martian equivalent of a day. When you select a
+                particular day on the rover's webpage, you'll also see the
+                corresponding sol number for that day. The sol count begins on
+                the day the rover landed on Mars. For instance, if a photo was
+                taken on Spirit's 1000th Martian sol exploring Mars, its sol
+                attribute would be 1000.
+              </p>
+            </div>
+          </div>
+          <div class="part-two">
+            <div class="spaceing">
+              <h2>Camera Abbreviations</h2>
+              <p>
+                When you click on the filters, you'll see some unfamiliar words.
+                These are abbreviations for the types of cameras that Spirit
+                has. It's important to note that while Spirit and Opportunity
+                have the same cameras, Curiosity has a different ones. So, don't
+                forget to check the Curiosity rover's page to see what kind of
+                camera it has.
+              </p>
+            </div>
+            <div class="spaceing">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Abbreviation</th>
+                    <th>Camera</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>FHAZ</td>
+                    <td>Front Hazard Avoidance Camera</td>
+                  </tr>
+                  <tr>
+                    <td>RHAZ</td>
+                    <td>Rear Hazard Avoidance Camera</td>
+                  </tr>
+                  <tr>
+                    <td>NAVCAM</td>
+                    <td>Navigation Camera</td>
+                  </tr>
+                  <tr>
+                    <td>PANCAM</td>
+                    <td>Panoramic Camera</td>
+                  </tr>
+                  <tr>
+                    <td>MINITES</td>
+                    <td>Miniature Thermal Emission Spectrometer (Mini-TES)</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-        <div class="mobile-filter-btn"></div>
-        <section class="raw-img-gallary gallary">
-          <ul class="raw-images-list">
-            <!-- will create li through js -->
-          </ul>
-        </section>
-        <footer class="search-footer">
+      </section>
+      <hr />
+      <section class="show">
+        <div class="get-date-container">
+          <div class="date-label-container">
+            <label for="date">
+              Set a date
+              <input type="date" name="date" />
+            </label>
+            <button class="get-date">Press</button>
+          </div>
+        </div>
+        <div class="api">
+          <!-- this part will show the number of sols and total number of photos -->
+          <p class="number-sols"></p>
+          <p class="total-photos"></p>
+          <!-- mission manifest api -->
+        </div>
+      </section>
+      <hr />
+      <!-- create rows -->
+      <div class="layout">
+        <div id="primary-row">
+          <aside class="boxed raw-images">
+            <header>
+              <h2>Camera</h2>
+              <div class="mobile-filter-contorls"></div>
+            </header>
+            <div class="form-section">
+              <fieldset
+                class="cameras expanded facet-section"
+                id="form-section-cameras"
+              >
+                <ul>
+                  <!-- name of the camera -->
+                  <li
+                    class="facetitem ri-checkbox"
+                    id="front-hazard-avoidance-camera"
+                  >
+                    <label>
+                      <input
+                        class="facetitem-checkbox"
+                        type="checkbox"
+                        name="front-hazard-avoidance-camera"
+                        checked
+                      />
+                      <span class="label-text">
+                        <span>FHAZ</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li
+                    class="facetitem ri-checkbox"
+                    id="rear-hazard-avoidance-camera"
+                  >
+                    <label>
+                      <input
+                        type="checkbox"
+                        class="facetitem-checkbox"
+                        name="rear-hazard-avoidance-camera"
+                      />
+                      <span class="label-text">
+                        <span>RHAZ</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="facetitem ri-checkbox" id="navigation-camera">
+                    <label>
+                      <input
+                        type="checkbox"
+                        class="facetitem-checkbox"
+                        name="navigation-camera"
+                      />
+                      <span class="label-text">
+                        <span>NAVCAM</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="facetitem ri-checkbox" id="Panoramic Camera">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="panoramic-camera"
+                        class="facetitem-checkbox"
+                      />
+                      <span class="label-text">
+                        <span>PANCAM</span>
+                      </span>
+                    </label>
+                  </li>
+                  <li class="facetitem ri-checkbox" id="Mini-TES">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="mini-tes"
+                        class="facetitem-checkbox"
+                      />
+                      <span class="label-text">
+                        <span>MINITES</span>
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </aside>
+        </div>
+        <div id="secondary-row">
+          <div class="pagination-status">
+            <span class="nonessential">Showing</span>
+            <b>
+              <span class="start-index">1</span>
+              <span id="text">-</span>
+              <span class="end-index"></span>
+              <span id="text">-</span>
+            </b>
+            <span id="text">of</span>
+            <b>
+              <span class="total-results"></span>
+            </b>
+            <span class="nonessential">images</span>
+          </div>
           <div class="pagination-options">
             <div>
               <div class="pagination-nav">
                 <nav class="pagination">
+                  <!-- this is only disabled if it is at 1 however, once it goes to the next page it can go to the previous page -->
+                  <!-- you will use javascript to go to the previous page and then to the next -->
                   <span class="prev"> > </span>
                   <div class="page-selector">
                     <!-- for the input below the placeholder will be where the number is att right now you will use js to do that as well as the max. how many photos are currently in the page -->
@@ -270,11 +280,42 @@
                 </nav>
               </div>
             </div>
-            <span class="scroll-to-top">
-              <a href="#">Back to Top</a>
-            </span>
           </div>
-        </footer>
+          <div class="mobile-filter-btn"></div>
+          <section class="raw-img-gallary gallary">
+            <ul class="raw-images-list">
+              <!-- will create li through js -->
+            </ul>
+          </section>
+          <footer class="search-footer">
+            <div class="pagination-options">
+              <div>
+                <div class="pagination-nav">
+                  <nav class="pagination">
+                    <span class="prev"> > </span>
+                    <div class="page-selector">
+                      <!-- for the input below the placeholder will be where the number is att right now you will use js to do that as well as the max. how many photos are currently in the page -->
+                      <input
+                        type="number"
+                        class="page-num"
+                        placeholder=""
+                        size="4"
+                        min="1"
+                        max=""
+                      />
+                      <span id="text">of</span>
+                      <span class="total-pages"></span>
+                    </div>
+                    <span class="next"> > </span>
+                  </nav>
+                </div>
+              </div>
+              <span class="scroll-to-top">
+                <a href="#">Back to Top</a>
+              </span>
+            </div>
+          </footer>
+        </div>
       </div>
     </div>
 
