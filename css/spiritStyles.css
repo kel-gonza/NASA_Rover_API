@@ -63,13 +63,51 @@ body{
 	bottom:0;
 	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
 }
-
-.explanation{
-	display: flex;
+.layout{
+	width:90%;
 	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	width: 90%;
+	padding: 3em 0;
+}
+.nav-color{
+	background:rgb(91, 91, 227);
+	z-index: 20;
+	height:30%;
+}
+.nav{
+	display: flex;
+	width:100%;
+	margin: 0;
+	justify-content: center;
+	position: relative;
+}
+.current .main-nav-item{
+	background-color:white;
+	color:black;
+
+}
+.nav .main-nav-item{
+	color:white; 
+	padding: 0.5rem 1rem;
+	margin:0.5rem 1rem;
+}
+
+.explanation{
+	display: flex;
+}
+
+.paths{
+	margin:0;
+
+}
+.paths span a{
+	color: rgb(43, 118, 217);
+	text-decoration: none;
+}
+.paths span a:hover{
+	text-decoration: underline;
 }
 
 .spaceing{
