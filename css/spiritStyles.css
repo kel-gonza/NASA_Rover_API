@@ -1,0 +1,93 @@
+/* ************************************************
+/* CSS
+/**************************************************/
+
+/* BORDER BOX HACK */
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/***************************************************
+/* LAYOUT
+*****************************************************/
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	line-height: 1.4;
+	min-height: 100%;
+	background-color: transparent;
+}
+
+/***************************************************
+/* ADDITIONAL STYLES
+*****************************************************/
+.custom-banner-container{
+	background-image: url('https://images.fineartamerica.com/images-medium-large/mars-exploration-rover-spirit-stocktrek-images.jpg');
+	position: relative;
+	height:290px;
+	width: 100%;
+	background-size:cover;
+	background-position: center;
+}
+.custom-banner-container .banner-head-overlay{
+	position: absolute;
+	bottom:0;
+	z-index: 2;
+	width:100%;
+}
+.custom-banner-container .article-title{
+	text-align: center;
+	color: #fff;
+	margin-bottom: 0.1em;
+}
+.gradient-container-bottom, .gradient-container-top{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	max-height: 45%;
+	height: 200px;
+}
+
+.gradient-container-top{
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+	top:0;
+}
+.gradient-container-bottom{
+	bottom:0;
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+}
+
+.explanation{
+	display: flex;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+.spaceing{
+	padding: 1em;
+}
+
+table, th, td{
+	border: 1px solid;
+}
+th, td{
+	padding:1em;
+}
+
+table{
+	border-spacing: 0;
+	width:100%;
+	max-width:400px;
+	/* margin:0 auto; */
+	display: block;
+
+}
