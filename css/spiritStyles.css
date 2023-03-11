@@ -31,7 +31,7 @@ body{
 .custom-banner-container{
 	background-image: url('https://images.fineartamerica.com/images-medium-large/mars-exploration-rover-spirit-stocktrek-images.jpg');
 	position: relative;
-	height:290px;
+	height:60vh;
 	width: 100%;
 	background-size:cover;
 	background-position: center;
@@ -72,26 +72,58 @@ body{
 	padding: 3em 0;
 }
 .nav-color{
-	background:rgb(91, 91, 227);
-	z-index: 20;
-	height:30%;
+	background-color: rgb(131, 80, 179);
+	height:45px;
 }
 .nav{
 	display: flex;
 	width:100%;
-	margin: 0;
 	justify-content: center;
+	text-transform: uppercase;
+	align-items:center;
+	width:100%;
+	margin: 0;
+}
+.nav.sticky{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.nav ul{
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.current .main-nav-item{
-	background-color:white;
-	color:black;
 
+.nav ul li{
+	position: relative;
+	list-style: none;
+	margin: 0;
+	border-color:#fff;
+	font-size: 1.1rem;
+	font-weight: 600;
+	padding-top: 10px;
 }
+
+.nav .current .nav-title .main-nav-item{
+	color:rgb(43, 118, 217);
+	background-color:white;
+}
+
 .nav .main-nav-item{
 	color:white; 
 	padding: 0.5rem 1rem;
-	margin:0.5rem 1rem;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: 600;
+	position: relative;
+	letter-spacing: 2px;
+
+}
+.nav .main-nav-item:hover {
+	color: rgb(43, 118, 217);
+	background: white;
 }
 
 .explanation{
