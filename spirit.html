@@ -141,15 +141,22 @@
           <div class="date-label-container">
             <label for="date">
               Set a date
-              <input type="date" name="date" />
+              <input
+                type="date"
+                name="date"
+                value=""
+                min="2004-01-25"
+                max="2010-03-21"
+              />
             </label>
-            <button class="get-date">Press</button>
+            <button class="get-date">Get Date</button>
           </div>
         </div>
         <div class="api">
           <!-- this part will show the number of sols and total number of photos -->
           <p class="number-sols"></p>
           <p class="total-photos"></p>
+          <p class="max-date"></p>
           <!-- mission manifest api -->
         </div>
       </section>
