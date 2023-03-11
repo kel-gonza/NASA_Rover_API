@@ -72,7 +72,7 @@ body{
 	padding: 3em 0;
 }
 .nav-color{
-	background-color: rgb(131, 80, 179);
+	background-color: #ff4081;
 	height:45px;
 }
 .nav{
@@ -160,4 +160,40 @@ table{
 	/* margin:0 auto; */
 	display: block;
 
+}
+
+ul{
+	list-style-type: none;
+}
+
+.cameras ul{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.date-label-container{
+	display: flex;
+	justify-content:center;
+	text-align: center;
+}
+
+.get-date{
+	margin-left:1em;
+	background-color: #ff4081;
+	color: #fff;
+	height: 2em;
+	width: 10em;
+	border-color: #ff4081;
+	box-shadow: 3px 3px 3px #751a39;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+.get-date:active{
+	box-shadow: -2px -2px 3px #751a39 ;
+}
+
+.number-sol, .total-photo{
+	font-weight: 700;
 }
