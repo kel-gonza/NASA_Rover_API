@@ -152,6 +152,7 @@
             <button class="get-date">Get Date</button>
           </div>
         </div>
+        <span class="error"></span>
         <div class="api">
           <!-- this part will show the number of sols and total number of photos -->
           <p class="number-sols"></p>
@@ -160,6 +161,7 @@
           <!-- mission manifest api -->
         </div>
       </section>
+      <!-- error will only appear if the user did not select the date -->
       <hr />
       <!-- create rows -->
       <div class="layout">
@@ -176,12 +178,10 @@
               >
                 <ul>
                   <!-- name of the camera -->
-                  <li
-                    class="facetitem ri-checkbox"
-                    id="front-hazard-avoidance-camera"
-                  >
-                    <label>
+                  <li class="facetitem ri-checkbox">
+                    <label for="fhaz">
                       <input
+                        value="FHAZ"
                         class="facetitem-checkbox"
                         type="checkbox"
                         name="front-hazard-avoidance-camera"
@@ -192,12 +192,10 @@
                       </span>
                     </label>
                   </li>
-                  <li
-                    class="facetitem ri-checkbox"
-                    id="rear-hazard-avoidance-camera"
-                  >
-                    <label>
+                  <li class="facetitem ri-checkbox">
+                    <label for="rhaz">
                       <input
+                        value="RHAZ"
                         type="checkbox"
                         class="facetitem-checkbox"
                         name="rear-hazard-avoidance-camera"
@@ -207,9 +205,10 @@
                       </span>
                     </label>
                   </li>
-                  <li class="facetitem ri-checkbox" id="navigation-camera">
-                    <label>
+                  <li class="facetitem ri-checkbox">
+                    <label for="navcam">
                       <input
+                        value="NAVCAM"
                         type="checkbox"
                         class="facetitem-checkbox"
                         name="navigation-camera"
@@ -219,9 +218,10 @@
                       </span>
                     </label>
                   </li>
-                  <li class="facetitem ri-checkbox" id="Panoramic Camera">
-                    <label>
+                  <li class="facetitem ri-checkbox">
+                    <label for="pancam">
                       <input
+                        value="PANCAM"
                         type="checkbox"
                         name="panoramic-camera"
                         class="facetitem-checkbox"
@@ -231,9 +231,10 @@
                       </span>
                     </label>
                   </li>
-                  <li class="facetitem ri-checkbox" id="Mini-TES">
-                    <label>
+                  <li class="facetitem ri-checkbox">
+                    <label for="minites">
                       <input
+                        value="MINITES"
                         type="checkbox"
                         name="mini-tes"
                         class="facetitem-checkbox"
@@ -322,6 +323,11 @@
               </span>
             </div>
           </footer>
+          <section class="raw-list-image">
+            <ul class="raw-image-list">
+              <li class="raw-image-container"></li>
+            </ul>
+          </section>
         </div>
       </div>
     </div>
