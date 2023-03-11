@@ -197,3 +197,7 @@ ul{
 .number-sol, .total-photo{
 	font-weight: 700;
 }
+
+.hidden{
+	display:none;
+}
