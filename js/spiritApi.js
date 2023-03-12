@@ -42,7 +42,10 @@ fetch(url)
 			
  			// show images that match the selected camera(s)
 			function showImages() {
+				let noResults = document.querySelector('.no-results')
+				noResults.innerText = '';
 				container.innerText = '';
+
 				data.photos.forEach(photo => {
 					const cameraName = photo.camera.name;
 					if(selectedCameras.includes(cameraName) || selectedCameras.length === 0) {
@@ -51,10 +54,13 @@ fetch(url)
 						img.alt = "Mars Rover Photo";
 						img.classList.add('.photo');
 						container.appendChild(img);
+					}else{
+						noResults.innerText = "No results found.";
 					}
-				
 				});
 			};
+
+
 			
 			// get all checkboxes and add event listners to filter images
 			const cameraCheckboxes = document.querySelectorAll('.facetitem-checkbox')
