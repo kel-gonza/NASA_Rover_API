@@ -10,7 +10,7 @@ document.querySelector('button').addEventListener('click', getFetch)
 // my url for manifest 
 const url = "https://api.nasa.gov/mars-photos/api/v1/manifests/spirit?api_key=nzch7KX7METbfXDHs74CXlhb46UGmJoVe1gZTZRL"
 
-// will fetch the max sol and total photos of this rover
+// will fetch the max sol and total photos of this rover when the pages render
 fetch(url)
 	.then(res => res.json()) // parse response as JSON
 	.then(data => {
@@ -25,6 +25,8 @@ fetch(url)
 
 
 	// this will only fetch the photos when it is called by the event listener
+	//  inside the function will show the checkboxes on which value it was checked.
+	
 
 	
 	function getFetch(){
@@ -38,14 +40,21 @@ fetch(url)
 		.then(data=> {
 			console.log(data)
 			
-			// this will show each images in the page
-			data.photos.forEach(photo => {
-				const img = document.createElement('img');
-				img.src = photo.img_src;
-				img.alt = "Mars Rover Photo";
-				img.classList.add('.photo');
-				container.appendChild(img);
-			});
+ 			// show images that match the selected camera(s)
+			function showImages() {
+				container.innerText = '';
+				data.photos.forEach(photo => {
+					const cameraName = photo.camera.name;
+					if(selectedCameras.includes(cameraName) || selectedCameras.length === 0) {
+						const img = document.createElement('img');
+						img.src = photo.img_src;
+						img.alt = "Mars Rover Photo";
+						img.classList.add('.photo');
+						container.appendChild(img);
+					}
+				
+				});
+			};
 			
 			// get all checkboxes and add event listners to filter images
 			const cameraCheckboxes = document.querySelectorAll('.facetitem-checkbox')
@@ -53,11 +62,16 @@ fetch(url)
 			cameraCheckboxes.forEach(function(checkbox) {
 				checkbox.addEventListener('change', function() {
 					selectedCameras = Array.from(cameraCheckboxes).filter(i => i.checked).map(i => i.value)
-				console.log(selectedCameras);
-				}); // add 'change' to anki
-		
-			})
+					console.log(selectedCameras);
+					showImages();
+				});
 
+			});
+			showImages();
+			
+			// showImages();// add 'change' to anki
+
+			
 		})
 		.catch(err => {
 			console.log(`error ${err}`)			
