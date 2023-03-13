@@ -269,7 +269,9 @@
                 <nav class="pagination">
                   <!-- this is only disabled if it is at 1 however, once it goes to the next page it can go to the previous page -->
                   <!-- you will use javascript to go to the previous page and then to the next -->
-                  <span class="prev"> > </span>
+                  <span class="prev">
+                    <a href="javascript:voide(0)"> < </a>
+                  </span>
                   <div class="page-selector">
                     <!-- for the input below the placeholder will be where the number is att right now you will use js to do that as well as the max. how many photos are currently in the page -->
                     <input
@@ -283,7 +285,9 @@
                     <span id="text">of</span>
                     <span class="total-pages"></span>
                   </div>
-                  <span class="next"> > </span>
+                  <span class="next">
+                    <a href="javascript:void(0)"> > </a>
+                  </span>
                 </nav>
               </div>
             </div>
@@ -294,12 +298,21 @@
               <!-- will create li through js -->
             </ul>
           </section>
+          <section class="raw-list-image">
+            <ul class="raw-image-list">
+              <li class="raw-image-container">
+				<div></div>
+			  </li>
+            </ul>
+          </section>
           <footer class="search-footer">
             <div class="pagination-options">
               <div>
                 <div class="pagination-nav">
                   <nav class="pagination">
-                    <span class="prev"> > </span>
+                    <span class="prev">
+                      <a href="javascript:void(0)"> < </a>
+                    </span>
                     <div class="page-selector">
                       <!-- for the input below the placeholder will be where the number is att right now you will use js to do that as well as the max. how many photos are currently in the page -->
                       <input
@@ -313,21 +326,18 @@
                       <span id="text">of</span>
                       <span class="total-pages"></span>
                     </div>
-                    <span class="next"> > </span>
+                    <span class="next">
+                      <a href="javascript:void(0)"> > </a>
+                    </span>
                   </nav>
                 </div>
               </div>
-              <span class="no-results"></span>
-              <span class="scroll-to-top">
-                <a href="#">Back to Top</a>
-              </span>
             </div>
           </footer>
-          <section class="raw-list-image">
-            <ul class="raw-image-list">
-              <li class="raw-image-container"></li>
-            </ul>
-          </section>
+          <span class="no-results"></span>
+          <span class="scroll-to-top">
+            <a href="#">Back to Top</a>
+          </span>
         </div>
       </div>
     </div>
