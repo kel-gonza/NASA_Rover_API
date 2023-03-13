@@ -25,6 +25,10 @@ body{
 	background-color: transparent;
 }
 
+a{
+	text-decoration: none;
+}
+
 /***************************************************
 /* ADDITIONAL STYLES
 *****************************************************/
@@ -83,6 +87,7 @@ body{
 	align-items:center;
 	width:100%;
 	margin: 0;
+	z-index: 1000;
 }
 .nav.sticky{
 	position: fixed;
@@ -199,5 +204,32 @@ ul{
 }
 
 .hidden{
-	display:none;
+	display: none;
 }
+
+/* Pagination styles */
+
+.pagination {
+	display: flex;
+}
+
+input[type=number]{
+	width: 30px;
+	text-align: center;
+	border: 2px solid grey;
+	opacity: 1;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+	appearance: none;
+}
+
+/* img styleing */
+
+.raw-list-image .raw-image-list .raw-image-container img{
+	position: relative;
+	max-height: 100%;
+	width: auto;
+}
+
+
